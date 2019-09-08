@@ -10,16 +10,19 @@ def map(array)
 end
  
 
-def reduce_to_all_true(array, sv = nil)
+def reduce(array, sv = nil)
     if sv 
       sum = sv
       i = 0
       yield(array[i])
       i = 1
     else
+      sum = array[0]
     while i < array.size 
       sum = yield(sum, array[i])
       i+=1
+    end
+  end
 
 
 
