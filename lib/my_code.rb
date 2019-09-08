@@ -9,24 +9,17 @@ def map(array)
   new_a
 end
  
-def reduce(array , starting_point = 0)
-  array = array.sum
-  while starting_point == 100 do
-    return array + starting_point
-    yield(array)
-  end
-   array
-end
 
 def reduce_to_all_true(array, sv = nil)
     if sv 
       sum = sv
       i = 0
       yield(array[i])
-      i += 1
+      i = 1
     else
-      
-  
+    while i < array.size 
+      sum = yield(sum, array[i])
+      i+=1
 
 
 
