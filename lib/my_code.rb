@@ -18,11 +18,11 @@ def reduce(array , starting_point = 0)
    array
 end
 
-def reduce_to_all_true(r_array)
+def reduce_to_all_true(array)
   i = 0
   while i < r_array.size do
-    if r_array[i] 
-      yield(r_array[i])
+    if array[i] 
+      yield(array[i])
       i += 1
     else
       return false
