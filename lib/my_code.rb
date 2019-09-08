@@ -14,15 +14,17 @@ def reduce(array, sv = nil)
     if sv 
       sum = sv
       i = 0
-      yield(array[i])
-      i = 1
     else
       sum = array[0]
+      i = 1
+    end
     while i < array.size 
       sum = yield(sum, array[i])
-      i+=1
+      i += 1
     end
+    sum
   end
+  
 
 
 
