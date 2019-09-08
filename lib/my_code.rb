@@ -19,21 +19,14 @@ def reduce(array , starting_point = 0)
 end
 
 def reduce_to_all_true(array, sv = nil)
-  i = 0
-  while i < array.size do
     if sv 
-      num1 = sv
+      sum = sv
       i = 0
       yield(array[i])
       i += 1
     else
-      return false
-    end
-  end
-  return true 
-end
-
- 
+      
+  
 
 
 
